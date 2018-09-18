@@ -6,7 +6,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.mc.custom.MilletCindeeActivity;
 import com.mc.custom.R;
 import com.mc.custom.adapter.MilletCindeeAdapter;
 import com.mc.custom.base.BaseActivity;
@@ -40,7 +39,7 @@ public class ConfirmActivity extends BaseActivity {
         mList = new ArrayList<String>();
         mList.add("Confirm001Activity");
         mList.add("Confirm002Activity");
-        mList.add("3");
+        mList.add("Confirm003Activity");
 
         mList.add("4");
         mList.add("5");
@@ -71,6 +70,7 @@ public class ConfirmActivity extends BaseActivity {
                         startActivity(new Intent(ConfirmActivity.this, Confirm002Activity.class));
                         break;
                     case 2:
+                        startActivity(new Intent(ConfirmActivity.this, Confirm003Activity.class));
                         break;
                     default:
                         break;

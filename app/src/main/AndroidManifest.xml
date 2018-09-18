@@ -20,10 +20,14 @@
         <activity android:name=".MainActivity" />
 
         <!-- Confirm -->
-        <activity android:name=".confirm.Confirm001Activity" />
-        <activity android:name=".confirm.Confirm002Activity" />
-        <activity android:name=".design.DesignActivity" />
-        <activity android:name=".confirm.ConfirmActivity"></activity>
+        <activity android:name=".confirm.ConfirmActivity" ></activity>
+        <activity android:name=".confirm.Confirm001Activity" ></activity>
+        <activity android:name=".confirm.Confirm002Activity" ></activity>
+        <activity android:name=".confirm.Confirm003Activity"></activity>
+
+
+        <activity android:name=".design.DesignActivity"></activity>
+
     </application>
 
 </manifest>
