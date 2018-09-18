@@ -33,7 +33,7 @@ public class MilletCindeeAdapter extends RecyclerView.Adapter<MilletCindeeAdapte
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView;
         itemView =
-                LayoutInflater.from(parent.getContext()).inflate(R.layout.item_linearlayout_manager, parent, false);
+                LayoutInflater.from(parent.getContext()).inflate(R.layout.main_recycle_item, parent, false);
         return new MilletCindeeAdapter.ViewHolder(itemView);
     }
 

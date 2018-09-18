@@ -1,6 +1,6 @@
 package com.mc.custom;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 
 import com.mc.custom.adapter.MilletCindeeAdapter;
 import com.mc.custom.base.BaseActivity;
+import com.mc.custom.confirm.Confirm001Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,7 @@ public class MilletCindeeActivity extends BaseActivity {
 
     @Override
     protected int getContentViewId() {
-        return R.layout.activity_millet_cindee;
+        return R.layout.millet_cindee_activity;
     }
 
     @Override
@@ -63,11 +64,14 @@ public class MilletCindeeActivity extends BaseActivity {
             public void onItemClick(int position) {
                 switch (position) {
                     case 0:
+                        startActivity(new Intent(MilletCindeeActivity.this, Confirm001Activity.class));
                         break;
                     case 1:
                         break;
                     case 2:
                         break;
+                        default:
+                            break;
                 }
             }
         });
