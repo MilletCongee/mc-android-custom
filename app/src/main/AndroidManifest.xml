@@ -18,8 +18,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+
+        <!-- Confirm -->
         <activity android:name=".confirm.Confirm001Activity" />
-        <activity android:name=".design.DesignActivity"></activity>
+        <activity android:name=".confirm.Confirm002Activity" />
+        <activity android:name=".design.DesignActivity" />
+        <activity android:name=".confirm.ConfirmActivity"></activity>
     </application>
 
 </manifest>
