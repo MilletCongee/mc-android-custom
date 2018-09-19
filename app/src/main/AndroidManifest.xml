@@ -28,6 +28,9 @@
 
         <activity android:name=".design.DesignActivity"></activity>
 
+
+        <!--hencoder-->
+        <activity android:name=".hencoder.practie001.Practie001Activity"></activity>
     </application>
 
 </manifest>

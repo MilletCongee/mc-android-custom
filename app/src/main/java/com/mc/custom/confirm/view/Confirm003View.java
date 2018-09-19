@@ -22,8 +22,44 @@ public class Confirm003View extends View {
         super(context);
     }
 
+
+    /**
+     * View 初始化
+     * */
     public Confirm003View(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    /**
+     * 测量 View 大小
+     * */
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    /**
+     * 确定 View 大小
+     * */
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+    }
+
+    /**
+     * 确定子View 布局(包含子View时用)
+     * */
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+    }
+    /**
+     * 实际绘制内容
+     * */
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+
     }
 
     public Confirm003View(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
@@ -47,9 +83,5 @@ public class Confirm003View extends View {
 
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
 
-    }
 }

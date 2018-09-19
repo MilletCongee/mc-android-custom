@@ -10,6 +10,13 @@ import android.widget.Button;
 import com.mc.custom.R;
 import com.mc.custom.base.BaseActivity;
 
+/**
+ * @author mc
+ * @darte 2018/9/18
+ * @email zzzcy1014@gmail.com
+ * @since JDK1.8+
+ * 事件分发
+ */
 public class Confirm003Activity extends BaseActivity {
     protected static final String TAG = "Confirm003Button";
     private Button mButton;
