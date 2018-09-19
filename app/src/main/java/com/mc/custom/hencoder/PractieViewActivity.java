@@ -1,4 +1,4 @@
-package com.mc.custom;
+package com.mc.custom.hencoder;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,42 +6,45 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.mc.custom.R;
 import com.mc.custom.adapter.MilletCindeeAdapter;
 import com.mc.custom.base.BaseActivity;
 import com.mc.custom.confirm.Confirm001Activity;
+import com.mc.custom.confirm.Confirm002Activity;
+import com.mc.custom.confirm.Confirm003Activity;
 import com.mc.custom.confirm.ConfirmActivity;
-import com.mc.custom.hencoder.PractieViewActivity;
+import com.mc.custom.hencoder.practie001.Practie001Activity;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author mc
- * @darte 2018/9/18
+ * @darte 2018/9/19
  * @email zzzcy1014@gmail.com
  * @since JDK1.8+
  */
-public class MilletCindeeActivity extends BaseActivity {
+public class PractieViewActivity extends BaseActivity {
     private RecyclerView mRecyclerView;
     private MilletCindeeAdapter mAdapter;
     List<String> mList;
 
     @Override
     protected int getContentViewId() {
-        return R.layout.millet_cindee_activity;
+        return R.layout.confirm_activity;
     }
 
     @Override
     protected void initView() {
-        mRecyclerView = findViewById(R.id.rl_millet_cindee);
+        mRecyclerView = findViewById(R.id.rl_confirm);
     }
 
     @Override
     protected void initData(Bundle savedInstanceState) {
         mList = new ArrayList<String>();
-        mList.add("ConfirmActivity");
-        mList.add("PractieViewActivity");
-        mList.add("3");
+        mList.add("Practie001Activity");
+        mList.add("Practie002Activity");
+        mList.add("Practie003Activity");
 
         mList.add("4");
         mList.add("5");
@@ -66,18 +69,13 @@ public class MilletCindeeActivity extends BaseActivity {
             public void onItemClick(int position) {
                 switch (position) {
                     case 0:
-                        startActivity(new Intent(MilletCindeeActivity.this, ConfirmActivity.class));
+                        startActivity(new Intent(PractieViewActivity.this, Practie001Activity.class));
                         break;
-                    case 1:
-                        startActivity(new Intent(MilletCindeeActivity.this, PractieViewActivity.class));
+
+                    default:
                         break;
-                    case 2:
-                        break;
-                        default:
-                            break;
                 }
             }
         });
-
     }
 }

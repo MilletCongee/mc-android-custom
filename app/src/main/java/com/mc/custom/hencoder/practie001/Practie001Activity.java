@@ -4,10 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.StringRes;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import com.mc.custom.R;
 import com.mc.custom.base.BaseActivity;
+import com.mc.custom.hencoder.PractieViewFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,11 +47,30 @@ public class Practie001Activity extends BaseActivity {
     @Override
     protected void initView() {
         pager = (ViewPager) findViewById(R.id.pager);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
     }
 
     @Override
     protected void initData(Bundle savedInstanceState) {
+        pager.setAdapter(new FragmentPagerAdapter(getSupportFragmentManager()) {
 
+            @Override
+            public Fragment getItem(int position) {
+                PageModel pageModel = pageModels.get(position);
+                return PractieViewFragment.newInstance(Practie001Activity.this,pageModel.practiceLayoutRes);
+            }
+
+            @Override
+            public int getCount() {
+                return pageModels.size();
+            }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return getString(pageModels.get(position).titleRes);
+            }
+        });
+        tabLayout.setupWithViewPager(pager);
     }
 
     private class PageModel {
