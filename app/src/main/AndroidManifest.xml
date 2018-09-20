@@ -32,6 +32,7 @@
         <!--hencoder-->
         <activity android:name=".hencoder.PractieViewActivity"></activity>
         <activity android:name=".hencoder.practie001.Practie001Activity"></activity>
+        <activity android:name=".hencoder.practie002.Practie002Activity"></activity>
     </application>
 
 </manifest>

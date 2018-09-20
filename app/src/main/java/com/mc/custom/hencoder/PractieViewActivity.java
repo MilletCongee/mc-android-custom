@@ -14,6 +14,7 @@ import com.mc.custom.confirm.Confirm002Activity;
 import com.mc.custom.confirm.Confirm003Activity;
 import com.mc.custom.confirm.ConfirmActivity;
 import com.mc.custom.hencoder.practie001.Practie001Activity;
+import com.mc.custom.hencoder.practie002.Practie002Activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,9 +43,9 @@ public class PractieViewActivity extends BaseActivity {
     @Override
     protected void initData(Bundle savedInstanceState) {
         mList = new ArrayList<String>();
-        mList.add("Practie001Activity");
-        mList.add("Practie002Activity");
-        mList.add("Practie003Activity");
+        mList.add("自定义 View 1-1 绘制基础");
+        mList.add("自定义 View 1-2 Paint 详解");
+        mList.add("自定义 View 1-3 drawText() 文字的绘制");
 
         mList.add("4");
         mList.add("5");
@@ -71,7 +72,13 @@ public class PractieViewActivity extends BaseActivity {
                     case 0:
                         startActivity(new Intent(PractieViewActivity.this, Practie001Activity.class));
                         break;
-
+                    case 1:
+                        startActivity(new Intent(PractieViewActivity.this, Practie002Activity.class));
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+                        break;
                     default:
                         break;
                 }
